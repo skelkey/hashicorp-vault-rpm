@@ -39,9 +39,12 @@ rm -rf $RPM_BUILD_ROOT
 %attr(-,root,root) %{_sbindir}/%{name}
 %attr(-,root,root) %{_unitdir}/%{name}.service
 %{_sysconfdir}/%{name}/%{name}.hcl
-
+%attr(700,%{name},%{name}) %{_localstatedir}/lib/%{name}
 
 %changelog
+* Tue Jan 07 2020 Edouard Camoin <edouard.camoin@gmail.com> 1.3.0-1
+  - Creating /var/lib/vault
+
 * Wed Jan 01 2020 Edouard Camoin <edouard.camoin@gmail.com> 1.3.0-1
   - Correcting pre and postun entry
 

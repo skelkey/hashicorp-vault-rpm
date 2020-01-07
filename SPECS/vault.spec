@@ -29,6 +29,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__install} -m 0644 %{SOURCE1} %{buildroot}%{_unitdir}/%{name}.service
 %{__install} -d -m 0755 %{buildroot}%{_sysconfdir}/%{name}
 %{__install} -m 0600 %{SOURCE2} %{buildroot}%{_sysconfdir}/%{name}/%{name}.hcl
+%{__install} -d -m 0700 %{buildroot}%{_localstatedir}/lib/%{name}
 
 %pre
 /usr/bin/getent group %{name} > /dev/null || /usr/sbin/groupadd -r %{name}

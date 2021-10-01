@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:           vault
-Version:        1.3.0 
+Version:        1.8.3
 Release:        1%{?dist}
 Summary:        Manage Secrets and Protect Sensitive Data
 
@@ -43,6 +43,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(700,%{name},%{name}) %{_localstatedir}/lib/%{name}
 
 %changelog
+* Fri Oct 01 2021 Edouard Camoin <edouard.camoin@gmail.com> 1.8.3-1
+  - Upgrade to 1.8.3 version of Vault
+
 * Tue Jan 07 2020 Edouard Camoin <edouard.camoin@gmail.com> 1.3.0-1
   - Creating /var/lib/vault
 
